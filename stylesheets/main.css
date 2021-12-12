@@ -17,6 +17,16 @@ a,p{
     font-size: 1.5em;
 }
 
+a{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+article{
+    padding: 10px;
+    width: 80vw;
+}
+
 h1{
     font-weight: 300;
     font-size: 4em;
