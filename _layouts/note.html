@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>Combusting Note - {{ page.title }}</title>
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<link rel="stylesheet" href="/stylesheets/meteorite.css">
+		<script src="scripts/meteorite.js"></script>
+	</head>
+	<body>
+		<h1>{{ page.title }}</h1>
+		<note-info>
+			<p> 記録者: {{ page.author }}</p>
+			<p> 日時: {{ page.date | date: "%Y/%m/%-d" }}</p>
+		</note-info>
+		<contents>
+			{{ content }}
+        </contents>
+		<a href="/windows/notes.html">notes</a>
+		<a href="/index.html">top</a>
+		<footer>
+			&copy; Copyright 2021, Schzna
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "note"
+      permalink: /notes/:year/:month/:day/:title:output_ext
