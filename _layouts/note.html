@@ -8,6 +8,21 @@
 		<link rel="stylesheet"
 			href="/stylesheets/meteorite.css">
 		<script src="scripts/meteorite.js"></script>
+		<script async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			  	CommonHTML: {
+			    	scale: 140
+			  	},
+			  	"HTML-CSS": {
+  					availableFonts: [],
+  					preferredFont: null,
+  					webFont: "Neo-Euler",
+  					mtextFontInherit: true
+  				}
+			});
+		</script>
 	</head>
 	<body>
 		<h1>{{ page.title }}</h1>
