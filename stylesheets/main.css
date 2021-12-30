@@ -44,6 +44,8 @@ info-block{
 category{
     font-size: large;
     margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 5px;

@@ -11,6 +11,7 @@ Tree{
 
 Tree:hover p{
     color: #fff;
+    border-radius: 5px;
 }
 
 Tree *{
@@ -39,6 +40,7 @@ Tree > * ul{
     padding: 0;
     list-style: none;
     border: 2px solid;
+    border-radius: 5px;
 }
 
 Tree ul[expand=false]{
