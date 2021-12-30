@@ -1,0 +1,124 @@
+Tree{
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    transition: all ease-out 200ms;
+}
+
+Tree:hover p{
+    color: #fff;
+}
+
+Tree *{
+    transition: all ease-out 0.5s;
+    margin: 0;
+}
+
+Tree a{
+    z-index: 1;
+    text-decoration: none;
+    height: 40%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+Tree > ul{
+    border: none;
+}
+
+Tree > ul ul{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+Tree > * ul{
+    padding: 0;
+    list-style: none;
+    border: 2px solid;
+}
+
+Tree ul[expand=false]{
+    opacity: 0.0;
+    max-height: 0;
+    z-index: 4;
+}
+
+Tree ul[expand=false] > *{
+    pointer-events: none;
+}
+
+Tree ul[expand=true] > *{
+    pointer-events: auto;
+}
+
+Tree ul[expand=true]{
+    opacity: 1.0;
+    max-height: 100vh;
+}
+
+
+Tree ul[expand=false] > li{
+    opacity: 0.0;
+    max-height: 0;
+}
+
+Tree ul[expand=true] > li{
+    opacity: 1.0;
+    max-height: 60vh;
+}
+
+Tree > ul{
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+Tree  ul  li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+Tree ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+Tree ul p[expand=true]:before, Tree ul p[expand=true]:after {
+  content: '−';
+  margin: 0.2em;
+  cursor: pointer;
+}
+
+Tree ul p[expand=false]:after, Tree ul p[expand=false]:before {
+  content: '+';
+  margin: 0.2em;
+}
+
+Tree ul p[expand=none]:before {
+    content: '  ';
+}
+
+
+Tree ul li:last-child:after {
+    height: 15px;
+}
+
+Tree p{
+    text-decoration: none;
+    display: inline-block;
+    transition: all ease-out 200ms;
+}
+
+Tree li:hover > p{
+    background-color: #fff;
+    color: #222;
+}
