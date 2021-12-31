@@ -13,6 +13,10 @@ body{
     align-items: center;
 }
 
+hr{
+    color: white;
+}
+
 a,p{
     font-size: 1.5em;
 }
