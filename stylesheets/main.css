@@ -76,6 +76,11 @@ contents *{
     font-size: x-large;
 }
 
+contents emph{
+    color: #00ddff;
+    font-weight: 500;
+}
+
 footer{
     text-align: center;
     width: 100%;
