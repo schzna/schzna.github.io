@@ -76,6 +76,13 @@ contents *{
     font-size: x-large;
 }
 
+contents blockquote{
+    font-style: italic;
+    font-weight: 100;
+    background-color: #004477;
+    border-radius: 5px;
+}
+
 contents emph{
     color: #00ddff;
     font-weight: 500;
