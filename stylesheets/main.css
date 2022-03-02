@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
 @font-face{
     font-family: yuriamo;
     src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff');
@@ -64,7 +66,7 @@ category{
 }
 
 contents{
-    padding: 5px;
+    padding: 15px;
     width: 80vw;
     border: solid white 2px;
     margin: 10px;
@@ -73,8 +75,22 @@ contents{
 }
 
 contents p{
-    margin: 10px;
+    margin: 2px;
     text-indent: 1em;
+}
+
+contents yuri{
+    font-size: x-large;
+    margin: 10px;
+}
+
+contents code{
+    font-family: 'Ubuntu';
+    font-size: large;
+    background-color: #111122;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 contents *{
