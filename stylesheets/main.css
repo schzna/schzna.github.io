@@ -42,7 +42,11 @@ notes{
 }
 
 thumnail{
-    border: 2px white;
+    width: 100%;
+    min-height: 20vh;
+    border: 2px white solid;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 thumnail a{
