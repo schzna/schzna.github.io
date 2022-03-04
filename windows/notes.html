@@ -9,7 +9,7 @@ title: "List"
 		<link rel="stylesheet"
 			href="/stylesheets/main.css">
 		<link rel="stylesheet"
-			href="/stylesheets/tree.css">
+			href="/stylesheets/notes.css">
 		<script src="/scripts/tree.js"></script>
 		<script>
 			MathJax = {
@@ -33,32 +33,10 @@ title: "List"
 			{% for post in site.posts %}
 			<thumnail>
 				<a href="{{ post.url }}">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} ) </a>
-				<p>{{ post.excerpt }}</p>
+				{{ post.excerpt }}
 			</thumnail>
 			{% endfor %}
 		</notes>
-		<tree>
-			<ul>
-				<li>
-					<p expand="true">カテゴリ</p>
-					<ul expand="true">
-						{% for category in site.categories %}
-						<li>
-							<p expand="false">{{ category[0] }}</p><a></a>
-							<ul expand="false">
-								{% for post in category[1] %}
-								<li>
-									<a href="{{ post.url }} ">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} )
-									</a><a></a>
-								</li>
-								{% endfor %}
-							</ul>
-						</li>
-						{% endfor %}
-					</ul>
-				</li>
-			</ul>
-		</tree>
 		<a href="/index.html">top</a>
 		<footer>
 			&copy; Copyright 2022, Schzna
