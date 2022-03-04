@@ -34,6 +34,21 @@ a{
     color: #ddd;
 }
 
+notes{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+thumnail{
+    border: 2px white;
+}
+
+thumnail a{
+    font-size: x-large;
+}
+
 note-info{
     width: 80%;
     margin-top: 2em;
@@ -74,7 +89,7 @@ contents{
     border-radius: 5px;
 }
 
-contents p{
+contents p,thumnail p{
     margin: 2px;
     text-indent: 1em;
 }
@@ -109,7 +124,7 @@ contents emph{
     font-weight: 500;
 }
 
-contents yuri{
+yuri{
     font-family: yuriamo;
 }
 
