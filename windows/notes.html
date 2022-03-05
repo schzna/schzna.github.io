@@ -10,7 +10,7 @@ title: "List"
 			href="/stylesheets/main.css">
 		<link rel="stylesheet"
 			href="/stylesheets/notes.css">
-		<script src="/scripts/tree.js"></script>
+		<script src="/scripts/category.js"></script>
 		<script>
 			MathJax = {
 				chtml: {
@@ -29,7 +29,16 @@ title: "List"
 	</head>
 	<body>
 		<h1>Combusting Notes</h1>
-		<notes>
+		<h3>カテゴリ</h3>
+		<categories>
+			<a id="all"
+				href="/windows/notes.html">すべて</a>
+			{% for category in site.categories %}
+			<a id="{{ category[0] }}"
+				href="/windows/notes.html?category={{ category[0] }}">{{ category[0] }}</a>
+			{% endfor %}
+		</categories>
+		<notes id="all">
 			{% for post in site.posts %}
 			<thumnail>
 				<a href="{{ post.url }}">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} ) </a>
@@ -37,6 +46,16 @@ title: "List"
 			</thumnail>
 			{% endfor %}
 		</notes>
+		{% for category in site.categories %}
+		<notes id="{{ category[0] }}">
+			{% for post in category[1] %}
+			<thumnail>
+				<a href="{{ post.url }}">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} ) </a>
+				{{ post.excerpt }}
+			</thumnail>
+			{% endfor %}
+		</notes>
+		{% endfor %}
 		<a href="/index.html">top</a>
 		<footer>
 			&copy; Copyright 2022, Schzna
