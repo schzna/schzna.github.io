@@ -34,6 +34,33 @@ a{
     color: #ddd;
 }
 
+body > h3{
+    margin: 0;
+    width: 80vw;
+}
+
+categories #selected{
+    border: solid 2px white;
+}
+
+categories *{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+categories *:hover{
+    background-color: #eee;
+    color: #222;
+}
+
+categories{
+    margin-bottom: 20px;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 notes{
     width: 80%;
     display: flex;
