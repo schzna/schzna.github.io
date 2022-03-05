@@ -80,6 +80,12 @@ thumnail a{
     font-size: x-large;
 }
 
+thumnail #more{
+    color: #ddddff;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
 note-info{
     width: 80%;
     margin-top: 2em;
