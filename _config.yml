@@ -1,5 +1,14 @@
 excerpt_separator: <!--more-->
+kramdown:
+  math_engine: mathjax
 defaults:
+  -
+    scope:
+      path: "docs/math"
+      type: "pages"
+    values:
+      layout: "mathdoc"
+      permalink: /math/:basename:output_ext
   -
     scope:
       path: ""
