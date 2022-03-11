@@ -1,2 +1,48 @@
-thorem{
+body{
+    counter-reset: theorem-num 0;
+}
+
+Theorem {
+    display: block;
+    font-style: italic;
+}
+
+Theorem:before {
+    content: "Theorem. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+Theorem[name]:before {
+    content: "Theorem (" attr(name) ") ";
+}
+
+Proposition {
+    margin: 1em;
+    padding: 5px;
+    border: solid 2px white;
+    border-radius: 5px;
+    margin-left: 1em;
+    display: block;
+    font-style: italic;
+}
+
+Proposition:before {
+    counter-increment: theorem-num 1;
+    content: "Proposition " counter(theorem-num) ".\A";
+    font-weight: bold;
+    font-style: normal;
+    white-space: pre;
+}
+
+Proof:before{
+    content: "\AProof. \A";
+    white-space: pre;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+Proof:after{
+    font-style: normal;
+    content: "□";
+    white-space: pre;
 }

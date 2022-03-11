@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 
+@import url('/stylesheets/math.css');
+
 @font-face{
     font-family: yuriamo;
     src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff');
