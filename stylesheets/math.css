@@ -3,18 +3,29 @@ body{
 }
 
 Theorem {
+    margin: 1em;
+    padding: 5px;
+    border: solid 2px white;
+    border-radius: 5px;
+    margin-left: 1em;
     display: block;
     font-style: italic;
 }
 
 Theorem:before {
-    content: "Theorem. ";
+    counter-increment: theorem-num 1;
+    content: "定理 " counter(theorem-num) ".\A";
     font-weight: bold;
     font-style: normal;
+    white-space: pre;
 }
 
 Theorem[name]:before {
-    content: "Theorem (" attr(name) ") ";
+    counter-increment: theorem-num 1;
+    content: "定理 (" attr(name) ") " counter(theorem-num) ".\A";
+    font-weight: bold;
+    font-style: normal;
+    white-space: pre;
 }
 
 Proposition {
@@ -29,16 +40,17 @@ Proposition {
 
 Proposition:before {
     counter-increment: theorem-num 1;
-    content: "Proposition " counter(theorem-num) ".\A";
+    content: "命題 " counter(theorem-num) ".\A";
     font-weight: bold;
     font-style: normal;
     white-space: pre;
 }
 
 Proof:before{
-    content: "\AProof. \A";
+    content: "\A証明. \A";
     white-space: pre;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
+    font-style: normal;
 }
 
 Proof:after{
