@@ -2,7 +2,7 @@ body{
     counter-reset: theorem-num 0;
 }
 
-Theorem {
+Theorem, Proposition, Definition {
     margin: 1em;
     padding: 5px;
     border: solid 2px white;
@@ -28,19 +28,17 @@ Theorem[name]:before {
     white-space: pre;
 }
 
-Proposition {
-    margin: 1em;
-    padding: 5px;
-    border: solid 2px white;
-    border-radius: 5px;
-    margin-left: 1em;
-    display: block;
-    font-style: italic;
-}
-
 Proposition:before {
     counter-increment: theorem-num 1;
     content: "命題 " counter(theorem-num) ".\A";
+    font-weight: bold;
+    font-style: normal;
+    white-space: pre;
+}
+
+Definition[name]:before {
+    counter-increment: theorem-num 1;
+    content: "定義 (" attr(name) ") " counter(theorem-num) ".\A";
     font-weight: bold;
     font-style: normal;
     white-space: pre;
