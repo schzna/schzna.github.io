@@ -1,6 +1,6 @@
 function start_starline(svg) {
     const next = 1000 + Math.random() * 500;
-    const y = -900 + Math.random() * 1600;
+    const y = -400 + Math.random() * 1900;
     const l = 100 + Math.random() * 300;
     const w = 3 + Math.random() * 10;
     const duration = 1000 + Math.random() * 500;
@@ -28,7 +28,7 @@ const scale = 1.5;
 function start_meteorite() {
     const next = 100 + Math.random() * 100;
     const x = window.innerWidth/2.0 + Math.random() * 10 + scrollX;
-    const y = window.innerHeight/3.0 + Math.random() * 10 + screenY;
+    const y = window.innerHeight * 0.4 + Math.random() * 10 + screenY;
     const a = 30 + Math.random() * 10;
     const meteo = document.querySelector(".meteorite svg g");
     meteo.setAttribute("style", `
