@@ -4,12 +4,12 @@
 
 @import url('/stylesheets/math.css');
 
-@font-face{
+@font-face {
     font-family: yuriamo;
     src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff');
 }
 
-body{
+body {
     font-family: 'Zen Maru Gothic', 'Noto Sans', 'Noto Serif';
     background-color: #112244;
     color: white;
@@ -22,40 +22,41 @@ body{
     align-items: center;
 }
 
-hr{
+hr {
     color: white;
 }
 
-a,p{
+a,
+p {
     font-size: 1.5em;
 }
 
-a{
+a {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #ddd;
 }
 
-body > h3{
+body>h3 {
     margin: 0;
     width: 80vw;
 }
 
-categories #selected{
+categories #selected {
     border: solid 2px white;
 }
 
-categories *{
+categories * {
     padding: 5px;
     border-radius: 5px;
 }
 
-categories *:hover{
+categories *:hover {
     background-color: #eee;
     color: #222;
 }
 
-categories{
+categories {
     margin-bottom: 20px;
     width: 80vw;
     display: flex;
@@ -63,14 +64,14 @@ categories{
     justify-content: space-around;
 }
 
-notes{
+notes {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-thumnail{
+thumnail {
     width: 100%;
     min-height: 20vh;
     border: 2px white solid;
@@ -78,35 +79,35 @@ thumnail{
     margin: 10px;
 }
 
-thumnail a{
+thumnail a {
     font-size: x-large;
 }
 
-thumnail #more{
+thumnail #more {
     color: #ddddff;
     margin-left: 1em;
     text-decoration: none;
 }
 
-note-info{
+note-info {
     width: 80%;
     margin-top: 2em;
 }
 
-info-block p{
+info-block p {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 1em;
 }
 
-info-block{
+info-block {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0;
 }
 
-category{
+category {
     font-size: large;
     margin: 0;
     margin-left: 2px;
@@ -119,7 +120,7 @@ category{
     border-radius: 3px;
 }
 
-contents{
+contents {
     padding: 15px;
     width: 80vw;
     border: solid white 2px;
@@ -128,17 +129,18 @@ contents{
     border-radius: 5px;
 }
 
-contents p,thumnail p{
+contents p,
+thumnail p {
     margin: 2px;
     text-indent: 1em;
 }
 
-contents yuri{
+contents yuri {
     font-size: x-large;
     margin: 10px;
 }
 
-contents code{
+contents code {
     font-family: 'Ubuntu';
     font-size: large;
     background-color: #111122;
@@ -147,34 +149,34 @@ contents code{
     margin: 10px;
 }
 
-contents *{
+contents * {
     font-size: x-large;
 }
 
-contents blockquote{
+contents blockquote {
     font-style: italic;
     font-weight: 100;
     background-color: #004477;
     border-radius: 5px;
 }
 
-contents emph{
+contents emph {
     color: #00ddff;
     font-weight: 500;
 }
 
-yuri{
+yuri {
     font-family: yuriamo;
 }
 
-footer{
+footer {
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
     z-index: 2;
 }
 
-h1{
+h1 {
     font-weight: 300;
     font-size: 5em;
     z-index: 2;
@@ -184,7 +186,7 @@ h1{
     margin-bottom: 5vh;
 }
 
-block{
+block {
     cursor: pointer;
     width: 60vw;
     margin: 10px;
@@ -195,17 +197,23 @@ block{
     transition: 400ms;
 }
 
-block:hover{
+block:hover {
     background-color: rgba(255, 255, 255, 0.6);
     color: #222;
 }
 
-block p{
+block p {
     margin: 10px;
 }
 
-h2{
+h2 {
     padding: 5px;
     font-size: 2em;
     margin: 0;
+}
+
+audio {
+    align-items: center;
+    background-color: #eee;
+    width: 100%;
 }
