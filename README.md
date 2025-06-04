@@ -2,4 +2,6 @@
 
 私Schznaの個人的記録
 
-Me, Schzna's personal record.
+personal notes of me, schzna.
+
+[schzna.github.io](https://schzna.github.io/)
