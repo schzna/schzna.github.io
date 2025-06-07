@@ -1,8 +1,11 @@
-body{
+body {
     counter-reset: theorem-num 0;
 }
 
-Theorem, Proposition, Definition {
+Theorem,
+Proposition,
+Definition,
+Exercise {
     margin: 1em;
     padding: 5px;
     border: solid 2px white;
@@ -36,6 +39,14 @@ Proposition:before {
     white-space: pre;
 }
 
+Exercise:before {
+    counter-increment: theorem-num 1;
+    content: "演習 " counter(theorem-num) ".\A";
+    font-weight: bold;
+    font-style: normal;
+    white-space: pre;
+}
+
 Definition[name]:before {
     counter-increment: theorem-num 1;
     content: "定義 (" attr(name) ") " counter(theorem-num) ".\A";
@@ -44,14 +55,14 @@ Definition[name]:before {
     white-space: pre;
 }
 
-Proof:before{
+Proof:before {
     content: "\A証明. \A";
     white-space: pre;
     font-family: monospace;
     font-style: normal;
 }
 
-Proof:after{
+Proof:after {
     font-style: normal;
     content: "□";
     white-space: pre;
