@@ -1,0 +1,48 @@
+@import url('/stylesheets/main.css');
+
+input {
+	margin: 10px;
+}
+
+p {
+	margin: auto;
+}
+
+content {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 2px;
+	padding: 20px;
+	margin: 20px;
+}
+
+content body {
+	display: flex;
+	align-items: start;
+}
+
+content * p,
+content * li {
+	font-size: 1.5em;
+}
+
+content * h1 {
+	font-size: 3em;
+	font-weight: 500;
+	margin: auto;
+}
+
+content * h2 {
+	font-size: 2.5em;
+	font-weight: 400;
+}
+
+content * h3 {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+content * h4 {
+	font-size: 1.5em;
+	font-weight: 300;
+}

@@ -1,4 +1,4 @@
-import { flash, stdout, del, clear } from "./display.js";
+import { flash, stdout, del, clear, copyright } from "./display.js";
 import { FileSystem } from "./filesystem.js";
 
 const fs = new FileSystem("localStorage");
@@ -9,10 +9,11 @@ function init() {
 
 	fetch('https://schzna.github.io/index.html', { method: 'GET', mode: 'cors', headers: new Headers() })
 		.then((response) => response.text()).then(data => console.log(data));
-	
+
 	stdout('This is a schzna\'s computer(for PC visitor).\n');
 	stdout('This terminal prints downward.\n');
 	stdout('\'help\' command gives you more detail.\n')
+	copyright();
 	stdout(prompt);
 	flash();
 	setInterval(flash, 10_000);
@@ -38,6 +39,16 @@ function input_ctrl(e) {
 	}
 }
 
+function help() {
+	stdout("\'clear\' : clear the terminal buffer.\n");
+	stdout("\'exit\' : exit this computer.\n");
+	stdout("\'create\' [file] : create [file].\n");
+	stdout("\'cat\' [file] : shows the contents of [file].\n");
+	stdout("\'rm\' [file] : remove [file].\n");
+	stdout("\'ls\' : list files. there are no directories now.\n");
+	stdout("\'copyright\' : display copyright.\n");
+}
+
 function input(e) {
 	let c = String.fromCharCode(e.keyCode);
 	stdout(c);
@@ -51,12 +62,7 @@ function input(e) {
 						clear();
 						break;
 					case "help":
-						stdout("\'clear\' : clear the terminal buffer.\n");
-						stdout("\'exit\' : exit this computer.\n");
-						stdout("\'create\' [file] : create [file].\n");
-						stdout("\'cat\' [file] : shows the contents of [file].\n");
-						stdout("\'rm\' [file] : remove [file].\n");
-						stdout("\'ls\' : list files. there are no directories now.\n");
+						help();
 						break;
 					case "create":
 						fs.create_file(cmd[1], "file", cmd[2]);
@@ -78,6 +84,9 @@ function input(e) {
 							stdout(`${f}\n`);
 						});
 						break;
+					case "copyright":
+						copyright();
+						break;
 					case "exit":
 						window.location.href = "/modules/modules.html"
 						break;
@@ -90,14 +99,14 @@ function input(e) {
 				stdout(prompt);
 				stdin = "";
 			}
-		break;
+			break;
 		default:
 			{
 				stdin += c;
 			}
 			break;
 	}
-	
+
 	flash();
 }
 
