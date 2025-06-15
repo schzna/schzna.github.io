@@ -2,6 +2,10 @@ body {
     counter-reset: theorem-num 0;
 }
 
+math {
+    font-family: 'STIX Two Math';
+}
+
 Theorem,
 Proposition,
 Definition,
