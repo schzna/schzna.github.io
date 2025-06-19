@@ -31,6 +31,56 @@ function parse_sN(N, code, i) {
 	};
 }
 
+class U32 extends Number {
+	static fromNumber(num) {
+		if (Number.isSafeInteger(num) & num >= 0) {
+			return new U32(num);
+		}
+		return new U32(0);
+	}
+	static fromBytes(bytes) {
+		return new U32(parse_uN(32, bytes, 0).num);
+	}
+
+	to_bytes() {
+		let ar = []
+		let tmp = this;
+		while (tmp != 0) {
+			ar.push((tmp & 0x7f) + 0x80);
+			tmp = tmp >>> 7;
+		}
+		ar[ar.length - 1] -= 0x80;
+		return new Uint8Array(ar);
+	}
+}
+
+class S32 extends Number {
+	static fromNumber(num) {
+		if (Number.isSafeInteger(num)) {
+			return new S32(num);
+		}
+		return new S32(0);
+	}
+	static fromBytes(bytes) {
+		return new S32(parse_sN(32, bytes, 0));
+	}
+
+	to_bytes() {
+		let ar = []
+		let tmp = Math.abs(this);
+		let tmp2 = tmp;
+		tmp = tmp ^ 0xffffffff;
+		tmp = (tmp + 1) >>> 0;
+		while (tmp2 != 0) {
+			ar.push((tmp & 0x7f) + 0x80);
+			tmp = tmp >>> 7;
+			tmp2 = tmp2 >>> 7;
+		}
+		ar[ar.length - 1] -= 0x80;
+		return new Uint8Array(ar);
+	}
+}
+
 function parse_name(code, i) {
 	const { i: k, num: n } = parse_uN(32, code, i);
 	return {
@@ -49,6 +99,114 @@ function parse_section(code, i) {
 		"i": ii + size,
 		pre_i: ii
 	};
+}
+
+function join_uint8(xs) {
+	let idx = [0].concat(xs.map(v => v.length));
+	for (const i of [...Array(xs.length).keys()]) {
+		idx[i + 1] = idx[i + 1] + idx[i];
+	}
+	let res = new Uint8Array(idx[xs.length]);
+	for (const i of [...Array(xs.length).keys()]) {
+		res.set(xs[i], idx[i]);
+	}
+	return res;
+}
+
+function concat_uint8(a, b) {
+	return join_uint8([a, b]);
+}
+
+class Vec extends Array {
+	static fromBytes(bytes) {
+		const n = U32.fromBytes(bytes);
+
+	}
+
+	to_bytes() {
+		return join_uint8([(new U32(this.length)).to_bytes()].concat(this.map(v => v.to_bytes())));
+	}
+}
+
+class Valtype {
+	constructor(typename) {
+		this.typename = typename
+	}
+
+	to_bytes() {
+		switch (this.typename) {
+			case "i32":
+				return new Uint8Array([0x7f]);
+				break;
+			case "i64":
+				return new Uint8Array([0x7e]);
+				break;
+			case "f32":
+				return new Uint8Array([0x7d]);
+				break;
+			case "f64":
+				return new Uint8Array([0x7c]);
+				break;
+			case "v128":
+				return new Uint8Array([0x7b]);
+				break;
+			case "funcref":
+				return new Uint8Array([0x70]);
+				break;
+			case "externref":
+				return new Uint8Array([0x6f]);
+				break;
+			default:
+				break;
+		}
+		return new Uint8Array([]);
+	}
+}
+
+class Functype {
+	constructor(rt1, rt2) {
+		this.rt1 = rt1;
+		this.rt2 = rt2;
+	}
+	to_bytes() {
+		return join_uint8([new Uint8Array(0x60), this.rt1.to_bytes(), this.rt2.to_bytes()])
+	}
+}
+
+class Section {
+	constructor(N, B) {
+		this.N = N;
+		this.size = B.length;
+		this.B = B;
+	}
+
+	static fromBytes(bytes) {
+		N = bytes[0];
+		const s = U32.fromBytes(bytes.slice(1, 1 + 6));
+		size = new Number(s);
+		B = bytes.slice(1 + s.to_bytes().length, 1 + s.to_bytes().length + size);
+		return new Section(N, B);
+	}
+}
+
+class CustomSection extends Section {
+	constructor(name, bytes) {
+		const enc = new TextEncoder();
+		const buf_name = enc.encode(name);
+		super(0, concat_uint8(buf_name, bytes));
+	}
+}
+
+class TypeSection extends Section {
+	constructor(fts) {
+		this.fts = fts;
+		super(0, fts.to_bytes());
+	}
+
+	static fromBytes(bytes) {
+		const sec = Section.fromBytes(bytes);
+
+	}
 }
 
 function parse_custom_section(code, i) {
@@ -213,7 +371,7 @@ function test() {
 	//console.log(parse_uN(32, [0xE5, 0x8E, 0x26], 0));
 	//console.log(parse_sN(32, [0xC0, 0xBB, 0x78], 0));
 
-	fetch("./simple.wasm").then(res => res.arrayBuffer().then(buf => f(buf)));
+	//fetch("./simple.wasm").then(res => res.arrayBuffer().then(buf => f(buf)));
 }
 
 document.addEventListener("DOMContentLoaded", test);
