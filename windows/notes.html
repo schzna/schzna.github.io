@@ -28,7 +28,7 @@ title: "List"
 			</script>
 	</head>
 	<body>
-		<h1>Combusting Notes</h1>
+		<h1 id="title" >Combusting Notes</h1>
 		<h3>カテゴリ</h3>
 		<categories>
 			<a id="all"
@@ -44,7 +44,7 @@ title: "List"
 				<a href="{{ post.url }}">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} ) </a>
 				{{ post.excerpt }}
 				<a id="more"
-					href="{{ post.url }}">続きは記録のページで</a>
+					href="{{ post.url }}">続き</a>
 			</thumnail>
 			{% endfor %}
 		</notes>
@@ -55,11 +55,22 @@ title: "List"
 				<a href="{{ post.url }}">{{ post.title }} ( {{ post.date | date: "%Y/%m/%-d" }} ) </a>
 				{{ post.excerpt }}
 				<a id="more"
-					href="{{ post.url }}">続きは記録のページで</a>
+					href="{{ post.url }}">続き</a>
 			</thumnail>
 			{% endfor %}
 		</notes>
 		{% endfor %}
+		<page-navigator>
+			<a id="page-first"
+				href="./notes.html?page=1">
+			<< </a>
+			<a id="page-prev" href="./notes.html?page=1"> < </a>
+			<p id="page-indicator"> 0/1 </p>
+			<a id="page-next" href="./notes.html?page=2"> > </a>
+			<a id="page-last"
+				href="./notes.html?page=1">
+			>> </a>
+		</page-navigator>
 		<a href="/index.html">top</a>
 		<footer>
 			&copy; Copyright 2025, Schzna

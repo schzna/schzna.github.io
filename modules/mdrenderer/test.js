@@ -52,9 +52,32 @@ function parseMD(content) {
 	const parse_plain = function (parsed, lines) {
 		return [parsed + `<p>${lines[0]}</p>`, lines.slice(1)];
 	}
+	const ext_attributes = function (parsed, lines) {
+		let obj = {};
+		if (lines[0].startsWith("!---")) {
+			lines = lines.slice(1);
+			for (const line of lines) {
+				if (line.startsWith("---")) {
+					lines = lines.slice(1);
+					break;
+				} else {
+					const [key, value] = line.split(":").map(s => s.trim());
+					obj[key] = value;
+					lines = lines.slice(1);
+				}
+			}
+		}
+		return [parsed, lines, obj];
+	}
+	let attrs = {};
 	const parse_md = function (parsed, lines) {
 		const parsers = [parse_linebreak, parse_header, parse_list, parse_plain];
 		while (lines.length > 0) {
+			let obj = {};
+			[parsed, lines, obj] = ext_attributes(parsed, lines);
+			for (const [key, value] of Object.entries(obj)) {
+				attrs[key] = value;
+			}
 			for (const ps of parsers) {
 				const p = ps(parsed, lines);
 				//console.log(p);
@@ -69,6 +92,9 @@ function parseMD(content) {
 	const parsed = parse_md("", lines);
 	const res = `${parsed}`;
 	const doc = parser.parseFromString(res, "text/html");
+	for (const [key, value] of Object.entries(attrs)) {
+		doc.body.setAttribute(key, value);
+	}
 	return doc.body;
 }
 

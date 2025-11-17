@@ -1,3 +1,7 @@
+!---
+key: value
+---
+
 # Title
 
 ## Intoduction

@@ -39,7 +39,7 @@ a {
 
 body>h3 {
     margin: 0;
-    width: 80vw;
+    width: 9%;
 }
 
 categories #selected {
@@ -68,15 +68,21 @@ notes {
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 thumnail {
-    width: 100%;
-    min-height: 20vh;
+    width: 90%;
+    /*min-height: 20vh;*/
     border: 2px white solid;
     border-radius: 5px;
     margin: 10px;
+    background-color: rgba(0.0, 0.0, 0.0, 0.4);
+    transition: 400ms;
+}
+
+thumnail:hover {
+    /*padding-bottom: 40px;*/
 }
 
 thumnail a {
@@ -187,8 +193,9 @@ h1 {
 }
 
 block {
+    font-size: 1.3em;
     cursor: pointer;
-    width: 60vw;
+    width: 80vw;
     margin: 10px;
     border: solid;
     border-radius: 5px;
@@ -219,4 +226,18 @@ audio {
     margin-right: 5%;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+page-navigator {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+
+page-navigator a {
+    width: 2em;
+    text-decoration: none;
 }
