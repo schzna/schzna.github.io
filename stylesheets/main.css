@@ -58,14 +58,15 @@ categories *:hover {
 
 categories {
     margin-bottom: 20px;
-    width: 80vw;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 notes {
-    width: 80%;
+    width: 95%;
+    font-size: large;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,4 +241,5 @@ page-navigator {
 page-navigator a {
     width: 2em;
     text-decoration: none;
+    font-size: xx-large;
 }
