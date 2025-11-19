@@ -8,7 +8,7 @@ p {
 	margin: auto;
 }
 
-nodebase {
+svg#nodebase-root {
 	width: 70%;
 	height: auto;
 	border-style: solid;
@@ -16,14 +16,30 @@ nodebase {
 	border-radius: 2px;
 	padding: 3em;
 	margin: 1em;
-
 	background-color: #222;
 }
 
-nodebase block{
-	padding: 1em;
-	margin: 1em;
-	border-width: 3px;
-	border-radius: 3px;
-	border-style: solid;
+svg#nodebase-root .node rect {
+	fill: #111;
+	transition: 300ms;
+	stroke: #fff;
+	stroke-width: 3px;
+	rx: 10px;
+}
+
+svg#nodebase-root .node text {
+	fill: #fff;
+	font-weight: 400;
+}
+
+svg#nodebase-root .node circle {
+	fill: #fff;
+}
+
+svg#nodebase-root .node:hover rect{
+	fill: #ddd;
+}
+
+svg#nodebase-root .node:hover text {
+	fill: #222;
 }

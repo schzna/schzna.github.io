@@ -10,12 +10,21 @@
 	<body>
 		<h1>ノードベースのやつ</h1>
 		<p>ノードベースのやつです。</p>
-		<p>エディタはちょっと難易度高いので、とりあえず表示だけ。</p>
+		<p>とりあえずノードだけ、移動や接続はあとでやります。</p>
 
 		<nodebase>
-			<in out="x"> Input </in>
-			<block id="id" in="x" out="y"> Id </block>
-			<out in="y"> Output </out>
+			<block id="in"
+				name="Input">
+				<out>x</out>
+			</block>
+			<block id="f" name="f">
+				<in from="in[0]">x</in>
+				<out>y</out>
+			</block>
+			<block id="out"
+				name="Output">
+				<in from="f[0]">y</in>
+			</block>
 		</nodebase>
 
 		<a href="/modules/modules.html">modules</a>
