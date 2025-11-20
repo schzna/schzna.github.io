@@ -191,6 +191,7 @@ h1 {
     margin: 0;
     padding: 5px;
     margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 block {
@@ -230,6 +231,7 @@ audio {
 }
 
 page-navigator {
+    font-size: xx-large;
     width: 80vw;
     display: flex;
     flex-direction: row;
@@ -241,5 +243,15 @@ page-navigator {
 page-navigator a {
     width: 2em;
     text-decoration: none;
-    font-size: xx-large;
+}
+
+page-navigator .material-symbols-outlined {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 60px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }

@@ -9,14 +9,23 @@ p {
 }
 
 svg#nodebase-root {
-	width: 70%;
+	width: 80%;
 	height: auto;
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 2px;
-	padding: 3em;
 	margin: 1em;
 	background-color: #222;
+}
+
+svg#nodebase-root path {
+	fill: transparent;
+	stroke: #fff;
+	stroke-width: 3px;
+}
+
+svg#nodebase-root .node[sel="true"] rect {
+	fill: #fff;
 }
 
 svg#nodebase-root .node rect {
@@ -24,6 +33,7 @@ svg#nodebase-root .node rect {
 	transition: 300ms;
 	stroke: #fff;
 	stroke-width: 3px;
+	shape-rendering: crispEdges;
 	rx: 10px;
 }
 

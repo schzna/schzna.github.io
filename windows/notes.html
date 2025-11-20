@@ -10,6 +10,8 @@ title: "List"
 			href="/stylesheets/main.css">
 		<link rel="stylesheet"
 			href="/stylesheets/notes.css">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+				rel="stylesheet" />
 		<script src="/scripts/category.js"></script>
 		<script>
 			MathJax = {
@@ -62,14 +64,20 @@ title: "List"
 		{% endfor %}
 		<page-navigator>
 			<a id="page-first"
-				href="./notes.html?page=1">
-			<< </a>
-			<a id="page-prev" href="./notes.html?page=1"> < </a>
+				class="material-symbols-outlined">
+			keyboard_double_arrow_left </a>
+			<a id="page-prev" class="material-symbols-outlined">
+				chevron_backward
+			</a>
 			<p id="page-indicator"> 0/1 </p>
-			<a id="page-next" href="./notes.html?page=2"> > </a>
+			
+			<a id="page-next" class="material-symbols-outlined">
+				chevron_forward
+			</a>
 			<a id="page-last"
-				href="./notes.html?page=1">
-			>> </a>
+				class="material-symbols-outlined">
+			keyboard_double_arrow_right </a>
+			
 		</page-navigator>
 		<a href="/index.html">top</a>
 		<footer>

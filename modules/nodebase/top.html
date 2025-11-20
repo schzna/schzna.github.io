@@ -10,7 +10,8 @@
 	<body>
 		<h1>ノードベースのやつ</h1>
 		<p>ノードベースのやつです。</p>
-		<p>とりあえずノードだけ、移動や接続はあとでやります。</p>
+		<p>なんか細い線が残るのはどうにかしたい。</p>
+		<p>ノードや接続をいじれるようにするのはむずいので今度。</p>
 
 		<nodebase>
 			<block id="in"
@@ -18,12 +19,12 @@
 				<out>x</out>
 			</block>
 			<block id="f" name="f">
-				<in from="in[0]">x</in>
+				<in from="in.out[0]">x</in>
 				<out>y</out>
 			</block>
 			<block id="out"
 				name="Output">
-				<in from="f[0]">y</in>
+				<in from="f.out[0]">y</in>
 			</block>
 		</nodebase>
 
