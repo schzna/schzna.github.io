@@ -124,7 +124,7 @@ class Node {
             this.selpos = [e.touches[0].clientX, e.touches[0].clientY];
         };
 
-        this.element.onmousemove = (e) => {
+        window.addEventListener("mousemove", (e) => {
             if (this.selected) {
                 const [difx, dify] = [
                     e.clientX - this.selpos[0],
@@ -168,7 +168,7 @@ class Node {
                 }
                 this.selpos = [e.clientX, e.clientY];
             }
-        };
+        });
 
         this.element.ontouchmove = (e) => {
             if (this.selected) {
@@ -216,10 +216,10 @@ class Node {
             }
         };
 
-        this.element.onmouseup = (e) => {
+        window.addEventListener("mouseup", (e) => {
             this.selected = false;
             this.element.removeAttribute("sel");
-        };
+        });
 
         this.element.ontouchend = (e) => {
             this.selected = false;
