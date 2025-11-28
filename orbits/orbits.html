@@ -1,3 +1,6 @@
+---
+title: "List"
+---
 <!doctype html>
 <html>
 	<head>
@@ -5,18 +8,20 @@
 		<title>Combusting Note - {{ page.title }}</title>
 		<link rel="stylesheet"
 			href="/stylesheets/main.css">
+		<link rel="stylesheet"
+			href="/stylesheets/notes.css">
 		<link id="favicon"
 			rel="shortcut icon"
 			href="/debris/favicon/favicon.ico">
+		<script src="/scripts/category.js"></script>
 		<script>
 			MathJax = {
 				chtml: {
 					matchFontHeight: false
 				},
 				tex: {
-					tags: 'ams',
 					inlineMath: [['$', '$']],
-					displayMath: [['\[', '\]']]
+					displayMath: [['$$', '$$']]
 				}
 			};
 		</script>
@@ -26,23 +31,13 @@
 			</script>
 	</head>
 	<body>
-		<h1>{{ page.title }}</h1>
-		<note-info>
-			<info-block>
-				<p> 記録者: {{ page.author }}</p>
-				<p> 日時: {{ page.date | date: "%Y/%m/%-d" }}</p>
-			</info-block>
-			<info-block>
-				<p>カテゴリ:</p>
-				{% for category in page.categories %}
-				<category>{{ category }}</category>
-				{% endfor %}
-			</info-block>
-		</note-info>
-		<contents>
-			{{ content }}
-		</contents>
-		<a href="/windows/notes.html">notes</a>
+		<h1>Orbits</h1>
+		<block onclick="window.location.href='https://hosi1001.github.io'">
+			<h2>Hosi1001 個人サイト</h2>
+			<p>
+				これから開発を進めていくらしい。必見。
+			</p>
+		</block>
 		<a href="/index.html">top</a>
 		<footer>
 			&copy; Copyright 2025, Schzna

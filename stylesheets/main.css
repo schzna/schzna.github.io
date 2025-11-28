@@ -26,7 +26,6 @@ hr {
     color: white;
 }
 
-a,
 p {
     font-size: 1.5em;
 }
@@ -35,6 +34,7 @@ a {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #ddd;
+    font-size: 2em;
 }
 
 body>h3 {
