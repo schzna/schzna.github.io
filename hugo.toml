@@ -1,6 +1,7 @@
 baseURL = 'https://schzna.github.io/'
 locale = 'ja-jp'
 title = 'Meteorite warning'
+timeZone = 'Asia/Tokyo'
 
 [markup.goldmark.renderer]
 unsafe = true
