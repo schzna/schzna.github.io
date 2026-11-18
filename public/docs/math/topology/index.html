@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+		<meta charset="utf-8">
+		<title>位相空間の基礎</title>
+		<link rel="stylesheet"
+			href="/stylesheets/main.css">
+		<link rel="stylesheet"
+			href="/stylesheets/math.css">
+		<link id="favicon"
+			rel="shortcut icon"
+			href="/debris/favicon/favicon.ico">
+		<script>
+			MathJax = {
+				chtml: {
+					matchFontHeight: false
+				},
+				tex: {
+					tags: 'ams',
+					inlineMath: [['$', '$']],
+					displayMath: [['\[', '\]']]
+				},
+				startup: {
+					pageReady: () => {
+						const contents = document.querySelector("contents")
+						
+						return MathJax.startup.defaultPageReady();
+					}
+				}
+			};
+		</script>
+		<script id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+			</script>
+	</head>
+	<body>
+		<h1>位相空間の基礎</h1>
+		<contents>
+			<p>位相空間は距離空間の定式化からその抽象として登場した経緯があるため、まず距離空間を定義する。</p>
+<hr>
+<p>距離とは、集合$X$上の非負実数値の2変数関数$d(x, y)$であり、以下の性質を満たすものをいう。</p>
+<p>[
+\begin{align}
+d(x, y) = 0 &amp;\Leftrightarrow x = y \newline
+d(x, y) &amp;= d(y, x) \newline
+d(x, y) + d(y, z) &amp;\geq d(x, z)
+\end{align}
+]</p>
+<p>集合$X$と距離$d$の組$(X, d)$を距離空間という。</p>
+<hr>
+
+		</contents>
+		<a href="/index.html">top</a>
+		<footer>
+			&copy; Copyright 2025, Schzna
+		</footer>
+	</body>
+</html>

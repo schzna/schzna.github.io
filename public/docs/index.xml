@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Docs on Meteorite warning</title>
+		<link>http://localhost:1313/docs/</link>
+		<description>Recent content in Docs on Meteorite warning</description>
+		<generator>Hugo</generator>
+		<language>ja-jp</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>位相空間の基礎</title>
+				<link>http://localhost:1313/docs/math/topology/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/math/topology/</guid>
+				<description>&lt;p&gt;位相空間は距離空間の定式化からその抽象として登場した経緯があるため、まず距離空間を定義する。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;距離とは、集合$X$上の非負実数値の2変数関数$d(x, y)$であり、以下の性質を満たすものをいう。&lt;/p&gt;&#xA;&lt;p&gt;[&#xA;\begin{align}&#xA;d(x, y) = 0 &amp;amp;\Leftrightarrow x = y \newline&#xA;d(x, y) &amp;amp;= d(y, x) \newline&#xA;d(x, y) + d(y, z) &amp;amp;\geq d(x, z)&#xA;\end{align}&#xA;]&lt;/p&gt;&#xA;&lt;p&gt;集合$X$と距離$d$の組$(X, d)$を距離空間という。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+	</channel>
+</rss>

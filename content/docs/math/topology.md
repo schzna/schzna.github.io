@@ -3,6 +3,7 @@ title: "位相空間の基礎"
 author: "Schzna"
 category: "数学 位相空間"
 last_modified: "2022-03-06"
+layout: mathdoc
 ---
 
 位相空間は距離空間の定式化からその抽象として登場した経緯があるため、まず距離空間を定義する。  

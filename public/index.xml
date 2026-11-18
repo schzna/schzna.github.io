@@ -179,14 +179,14 @@
 				<link>http://localhost:1313/posts/2022-03-15-diary/</link>
 				<pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/2022-03-15-diary/</guid>
-				<description>&lt;p&gt;両立ができておりません&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;今日はでかけて知識を拾ったりしました。&lt;/p&gt;</description>
+				<description>&lt;p&gt;両立ができておりません&amp;hellip;&lt;/p&gt;&#xA;&lt;!--more---&gt;&#xD;&#xA;&lt;p&gt;今日はでかけて知識を拾ったりしました。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>日記</title>
 				<link>http://localhost:1313/posts/2022-03-14-diary/</link>
 				<pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/2022-03-14-diary/</guid>
-				<description>&lt;p&gt;助けて～～～&lt;/p&gt;&#xA;&lt;p&gt;一日寝てました&lt;/p&gt;</description>
+				<description>&lt;p&gt;助けて～～～&lt;/p&gt;&#xA;&lt;!--more---&gt;&#xD;&#xA;&lt;p&gt;一日寝てました&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>日記</title>
@@ -270,7 +270,7 @@
 				<link>http://localhost:1313/posts/2022-03-02-diary/</link>
 				<pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/2022-03-02-diary/</guid>
-				<description>&lt;p&gt;anki、やりました。&lt;/p&gt;&#xA;&lt;p&gt;いつかの&lt;!-- raw HTML omitted --&gt;memoraj^o&lt;!-- raw HTML omitted --&gt;、やってません&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;$T_2$空間であって$T_3$空間じゃないやつ、例はわかるんですが(ヒントにそんままかいてあった)導出が思いつかず。&lt;/p&gt;</description>
+				<description>&lt;p&gt;anki、やりました。&lt;/p&gt;&#xA;&lt;p&gt;いつかの&lt;yuri&gt;memoraj^o&lt;/yuri&gt;、やってません&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;$T_2$空間であって$T_3$空間じゃないやつ、例はわかるんですが(ヒントにそんままかいてあった)導出が思いつかず。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>日記</title>
@@ -355,6 +355,20 @@
 				<pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/2021-12-13-title/</guid>
 				<description>&lt;p&gt;どうやら隕石が隕ちてきているらしい、ということがわかった。&#xA;まだ遠くにあるのでしばらくはなにもないだろうけど、いつかは隕ちてくる。&#xA;どうすることもできないくせに、観測と予想だけできてしまうことがなんだかやるせない。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Combusting Notes</title>
+				<link>http://localhost:1313/windows/notes.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/windows/notes.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>位相空間の基礎</title>
+				<link>http://localhost:1313/docs/math/topology/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/docs/math/topology/</guid>
+				<description>&lt;p&gt;位相空間は距離空間の定式化からその抽象として登場した経緯があるため、まず距離空間を定義する。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;距離とは、集合$X$上の非負実数値の2変数関数$d(x, y)$であり、以下の性質を満たすものをいう。&lt;/p&gt;&#xA;&lt;p&gt;[&#xA;\begin{align}&#xA;d(x, y) = 0 &amp;amp;\Leftrightarrow x = y \newline&#xA;d(x, y) &amp;amp;= d(y, x) \newline&#xA;d(x, y) + d(y, z) &amp;amp;\geq d(x, z)&#xA;\end{align}&#xA;]&lt;/p&gt;&#xA;&lt;p&gt;集合$X$と距離$d$の組$(X, d)$を距離空間という。&lt;/p&gt;&#xA;&lt;hr&gt;</description>
 			</item>
 	</channel>
 </rss>
