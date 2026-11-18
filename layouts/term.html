@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Combusting Note - {{ .Title }}</title>
+		<link rel="stylesheet"
+			href="/stylesheets/main.css">
+		<link rel="stylesheet"
+			href="/stylesheets/notes.css">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet" />
+		<link id="favicon"
+			rel="shortcut icon"
+			href="/debris/favicon/favicon.ico">
+		<script src="/scripts/category.js"></script>
+		<script>
+			MathJax = {
+				chtml: {
+					matchFontHeight: false
+				},
+				tex: {
+					inlineMath: [['$', '$']],
+					displayMath: [['$$', '$$']]
+				}
+			};
+		</script>
+		<script id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+			</script>
+	</head>
+	<body>
+		<h1 id="title">Combusting Notes - {{ .Title }} </h1>
+		<h3>カテゴリ</h3>
+		<categories>
+			<a href="/windows/notes.html">
+				すべて
+			</a>
+			{{ range site.Taxonomies.categories.Alphabetical }}
+			<a href="{{ .Page.RelPermalink }}">
+				{{ .Page.LinkTitle }}（{{ .Count }}）
+			</a>
+			{{ end }}
+		</categories>
+		<notes id="all">
+			{{ range .Pages }}
+			<thumnail>
+				<a href="{{ .RelPermalink }}">{{ .Title }} ( {{ .Date.Format "2006/01/02" }} ) </a>
+				{{ .Summary }}
+
+				{{ if .Truncated }}
+				<a id="more"
+					href="{{ .RelPermalink }}">続きを読む</a>
+				{{ end }}
+			</thumnail>
+			{{ end }}
+		</notes>
+		<page-navigator>
+			<a id="page-first"
+				class="material-symbols-outlined">
+				keyboard_double_arrow_left </a>
+			<a id="page-prev"
+				class="material-symbols-outlined">
+				chevron_backward
+			</a>
+			<p id="page-indicator"> 0/1 </p>
+
+			<a id="page-next"
+				class="material-symbols-outlined">
+				chevron_forward
+			</a>
+			<a id="page-last"
+				class="material-symbols-outlined">
+				keyboard_double_arrow_right </a>
+
+		</page-navigator>
+		<a href="/index.html">top</a>
+		<footer>
+			&copy; Copyright 2025, Schzna
+		</footer>
+	</body>
+</html>

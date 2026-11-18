@@ -33,6 +33,9 @@
 		<h1 id="title" >Combusting Notes</h1>
 		<h3>カテゴリ</h3>
 		<categories>
+			<a href="/windows/notes.html">
+				すべて
+			</a>
 			{{ range site.Taxonomies.categories.Alphabetical }}
 			<a href="{{ .Page.RelPermalink }}">
 				{{ .Page.LinkTitle }}（{{ .Count }}）
