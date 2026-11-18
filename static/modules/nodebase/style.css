@@ -1,0 +1,55 @@
+@import url('/stylesheets/main.css');
+
+input {
+	margin: 10px;
+}
+
+p {
+	margin: auto;
+}
+
+svg#nodebase-root {
+	width: 80%;
+	height: auto;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 2px;
+	margin: 1em;
+	background-color: #222;
+}
+
+svg#nodebase-root path {
+	fill: transparent;
+	stroke: #fff;
+	stroke-width: 3px;
+}
+
+svg#nodebase-root .node[sel="true"] rect {
+	fill: #fff;
+}
+
+svg#nodebase-root .node rect {
+	fill: #111;
+	transition: 300ms;
+	stroke: #fff;
+	stroke-width: 3px;
+	shape-rendering: crispEdges;
+	rx: 10px;
+}
+
+svg#nodebase-root .node text {
+	fill: #fff;
+	font-weight: 400;
+}
+
+svg#nodebase-root .node circle {
+	fill: #fff;
+}
+
+svg#nodebase-root .node:hover rect{
+	fill: #ddd;
+}
+
+svg#nodebase-root .node:hover text {
+	fill: #222;
+}

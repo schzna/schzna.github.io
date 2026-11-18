@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+		<meta charset="utf-8">
+		<title>Combusting Note - 日記</title>
+		<link rel="stylesheet"
+			href="/stylesheets/main.css">
+		<link id="favicon"
+			rel="shortcut icon"
+			href="/debris/favicon/favicon.ico">
+		<script>
+			MathJax = {
+				chtml: {
+					matchFontHeight: false
+				},
+				tex: {
+					tags: 'ams',
+					inlineMath: [['$', '$']],
+					displayMath: [['\[', '\]']]
+				}
+			};
+		</script>
+		<script id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+			</script>
+	</head>
+	<body>
+		<h1>日記</h1>
+		<note-info>
+			<info-block>
+				<p> 記録者: schzna</p>
+				<p> 日時: 2022/03/10</p>
+			</info-block>
+			<info-block>
+				<p>カテゴリ:</p>
+				
+				<category>雑記</category>
+				
+				<category>数学</category>
+				
+			</info-block>
+		</note-info>
+		<contents>
+			<p>これマジでいいので蒼き鋼のアルペジオ見てから聞いてください。
+<a href="https://open.spotify.com/track/3L2Zd7DebmysISvMi2QEdR?si=fbab37f29c4c4a61">https://open.spotify.com/track/3L2Zd7DebmysISvMi2QEdR?si=fbab37f29c4c4a61</a></p>
+<hr>
+<p>ゼロ集合全体の族$\mathscr{Z}$から
+ゼロ集合列$(Z_i)$をとる。
+$Z_i$を$0$に移す連続写像を$f_i$とする。
+これらを用いて
+[
+f_i&rsquo;(x) = \sum_{k=1}^{i} \frac{\max(|f_k(x)|, 1)}{k2^k}
+]
+として各連続写像$f_i&rsquo; : \bigcup_{i=1}^{\infty} Z_i \rightarrow \mathbb{R}$を定義する。
+このとき、$i&lt;j$ について
+[
+\begin{align*}
+d(f_i&rsquo;, f_j&rsquo;) &amp;= \sup \{ | f_i&rsquo;(x) - f_j&rsquo;(x) | \mid x \in \bigcup_{i=1}^{\infty} Z_i \} \newline
+&amp;= \sup \left \{ \left | \sum_{k=i+1}^{j} \frac{\max(|f_k(x)|, 1)}{k2^k} \right | \mid x \in \bigcup_{i=1}^{\infty} Z_i \right \} \newline
+&amp;\leq \sum_{k=i+1}^{j} \frac{1}{k2^k} \newline
+&amp;\leq \frac{1}{i} \sum_{k=i+1}^{j} \frac{1}{2^k} \newline
+&amp;&lt; \frac{1}{i} \newline
+\end{align*}
+]
+より$\lim\limits_{i, j \to \infty} d(f_i&rsquo;, f_j&rsquo;) = 0$であるから関数列$(f_i&rsquo;)$は一様収束列。よってこの関数列は連続写像$f&rsquo;$に収束する。$\forall x \in \bigcup_{i=1}^{\infty} Z_i ; f&rsquo;(x) = 0$よりゼロ集合は可算乗法的である。</p>
+		</contents>
+		<a href="/windows/notes.html">notes</a>
+		<a href="/index.html">top</a>
+		<footer>
+			&copy; Copyright 2025, Schzna
+		</footer>
+	</body>
+</html>
